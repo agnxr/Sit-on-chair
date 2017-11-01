@@ -335,9 +335,6 @@ h1 {
 }
 
 .block {
-    /* prostokąt  - slajd 41 - element, który ma inną wartość niż static (tu: relatove, staje się konterem
-  zaiwerającym  - teraz elementy w nim zawarte o pozycji absolute będą ustawiane względem jego krawędzi a nie
-  elementów nadrzędnych (np. body) */
     position: relative;
     height: 500px;
     margin-top: -260px;
