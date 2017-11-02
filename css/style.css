@@ -24,6 +24,19 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Raleway';
+    src: url('Raleway-ExtraLight.eot');
+    src: local('Raleway ExtraLight'), local('Raleway-ExtraLight'),
+        url('../fonts/Raleway-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Raleway-ExtraLight.woff2') format('woff2'),
+        url('../fonts/Raleway-ExtraLight.woff') format('woff'),
+        url('../fonts/Raleway-ExtraLight.ttf') format('truetype'),
+        url('../fonts/Raleway-ExtraLight.svg#Raleway-ExtraLight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -115,6 +128,27 @@ a {
     margin-left: 0;
 }
 
+button#prevPicture {
+    font-size: 60px;
+    color: #00D1AC;
+    display: inline-block;
+    margin-top: 270px;
+    position: absolute;
+    left: 25%;
+    background-color: transparent;
+    border: 0;
+    transition-duration: 0.3s;
+}
+
+button#prevPicture:hover, button#nextPicture:hover {
+    color: grey;
+}
+
+button:focus {
+    outline: none;
+}
+
+
 #arrowRight {
     width: 8%;
     height: 600px;
@@ -123,16 +157,8 @@ a {
     display: inline-block;
 }
 
-#arrowLeft p {
-    font-size: 60px;
-    color: #00D1AC;
-    display: inline-block;
-    margin-top: 270px;
-    position: absolute;
-    left: 25%;
-}
 
-#arrowRight p {
+button#nextPicture {
     font-size: 60px;
     color: #00D1AC;
     display: inline-block;
@@ -140,6 +166,9 @@ a {
     margin-top: 270px;
     position: absolute;
     margin-right: 0;
+    background-color: transparent;
+    border: 0;
+    transition-duration: 0.3s;
 }
 
 #chairImg {
@@ -376,9 +405,6 @@ h1 {
 
 
 .block {
-    /* prostokąt  - slajd 41 - element, który ma inną wartość niż static (tu: relatove, staje się konterem
-  zaiwerającym  - teraz elementy w nim zawarte o pozycji absolute będą ustawiane względem jego krawędzi a nie
-  elementów nadrzędnych (np. body) */
     position: relative;
     height: 500px;
     margin-top: -260px;
@@ -388,7 +414,7 @@ h1 {
 }
 
 .outer {
-    /* duże kółko */
+    /* big circle */
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -400,7 +426,7 @@ h1 {
 }
 
 .inner {
-    /* małe kółko */
+    /* small circle */
     width: 50%;
     height: 50%;
     background: silver;
@@ -498,6 +524,7 @@ sup {
     color: #C5C5C5;
 }
 
+
 /* sekcja - Kontakt */
 
 #contact, footer {
@@ -555,289 +582,7 @@ textarea {
 ::-webkit-input-placeholder {
     /* Chrome/Opera/Safari */
     color: silver;
-}
 
-::-moz-placeholder {
-    /*     margin-top: 50px;Firefox 19+ */
-    color: silver;
-}
-
-:-ms-input-placeholder {
-    /* IE 10+ */
-    color: silver;
-}
-
-:-moz-placeholder {
-    /* Firefox 18- */
-    color: silver;
-}
-
-label {
-    color: silver;
-    font-size: 20px;
-}
-
-input[type="submit"] {
-    background-color: #00D1AC;
-    height: 60px;
-    width: 320px;
-    border-radius: 10px;
-}
-
-#box3 hr {
-    background: #00D1AC;
-    height: 8px;
-    width: 150px;
-    z-index: 2;
-    margin-bottom: 10px;
-}
-
-#box3 h2 {
-    color: black;
-    font-size: 18px;
-}
-
-/* koniec sekcji 2-giej */
-
-#prices {
-    width: 100%;
-    background-color: #F1F1F1;
-}
-
-/* Cennik */
-
-#priceListContainer {
-    width: 1024px;
-    height: 680px;
-    background-color: #f1f2f3;
-    margin-top: 50px;
-    position: relative;
-    box-sizing: border-box;
-    margin: 0 auto;
-    padding-top: 30px;
-}
-
-#priceListContainer p {
-    color: grey;
-    font-size: 20px;
-}
-
-#priceListContainer hr {
-    background: #00D1AC;
-    height: 8px;
-    width: 300px;
-    margin-bottom: 80px;
-}
-
-/* tabs */
-
-#tab1, #tab2, #tab3 {
-    margin-left: 0;
-    margin-right: 0px;
-    margin-top: 130px;
-}
-
-#tab1, #tab2 {
-    margin-right: 50px;
-}
-
-.main {
-    /* całość - całe div */
-    margin-top: 90px;
-}
-
-.priceCircle {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 2px solid silver;
-    z-index: 3;
-    margin: 0 auto;
-    position: relative;
-    background-color: #FEFEFE;
-    margin-bottom: 30px;
-}
-
-.block {
-    /* prostokąt  - slajd 41 - element, który ma inną wartość niż static (tu: relatove, staje się konterem
-  zaiwerającym  - teraz elementy w nim zawarte o pozycji absolute będą ustawiane względem jego krawędzi a nie
-  elementów nadrzędnych (np. body) */
-    position: relative;
-    height: 500px;
-    margin-top: -260px;
-    border: 1px solid silver;
-    box-sizing: border-box;
-    background-color: #F9F9F9;
-}
-
-.outer {
-    /* duże kółko */
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 2px solid silver;
-    background: white;
-    position: absolute;
-    top: -25px;
-    left: 115px;
-}
-
-.inner {
-    /* małe kółko */
-    width: 50%;
-    height: 50%;
-    background: silver;
-    border: 0px;
-    border-radius: 50%;
-    position: absolute;
-    top: 25%;
-    left: 25%;
-}
-
-.button {
-    /* dołącz */
-    padding: 7px;
-    background: #00D1AC;
-    color: white;
-    margin: 0px auto;
-    width: 50%;
-    border-radius: 10px;
-    text-align: center;
-}
-
-#button1 {
-    margin-top: 150px;
-}
-
-#button2 {
-    margin-top: 110px;
-}
-
-#button3 {
-    margin-top: 70px;
-}
-
-a {
-    text-align: center;
-}
-
-a:hover {
-    color: grey;
-}
-
-.block h2 {
-    margin-top: 25px;
-    color: #00D1AC;
-    text-align: center;
-}
-
-h3 {
-    color: #CCCCCC;
-    font-weight: bold;
-    font-size: 35px;
-    position: absolute;
-    margin-top: 20px;
-    margin-left: 20px;
-}
-
-sup {
-    color: #CCCCCC;
-    font-size: 16px;
-}
-
-.priceCircle p {
-    color: #CCCCCC;
-    margin-top: 70px;
-    text-align: center;
-}
-
-.darkGrey {
-    background-color: silver;
-}
-
-.mediumGrey {
-    background-color: #E3E3E3;
-}
-
-.darkGrey p, .mediumGrey p, .white p {
-    text-align: center;
-    font-size: 20px;
-    padding: 8px;
-}
-
-.mediumGrey {
-    color: #F1F1F1;
-}
-
-.mediumGrey p {
-    color: #AEAEAE;
-}
-
-.white {
-    background-color: #FFFFFF;
-}
-
-.white p {
-    color: #C5C5C5;
-}
-
-/* sekcja - Kontakt */
-
-#contact, footer {
-    width: 100%;
-    background-color: #FEFEFE;
-}
-
-.form {
-    width: 1024px;
-    height: 600px;
-    margin: 0 auto;
-    background-color: #FEFEFE;
-}
-
-.form p {
-    color: black;
-    font-size: 20px;
-    margin-top: 30px;
-}
-
-.form hr {
-    background: #00D1AC;
-    height: 8px;
-    width: 300px;
-    margin-bottom: 40px;
-}
-
-#data {
-    width: 60%;
-    box-sizing: border-box;
-    float: left;
-}
-
-#armchair img {
-    margin-left: 50px;
-    margin-bottom: 50px;
-}
-
-#name, #email, textarea {
-    border: 1px solid #00D1AC;
-    margin-bottom: 25px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 5px;
-    font-size: 30px;
-    width: 600px;
-    color: black;
-}
-
-textarea {
-    height: 240px;
-    resize: none;
-}
-
-::-webkit-input-placeholder {
-    /* Chrome/Opera/Safari */
-    color: silver;
 }
 
 ::-moz-placeholder {
@@ -870,6 +615,11 @@ input[type="submit"] {
     font-weight: bold;
     margin-left: 40px;
     margin-top: 30px;
+}
+
+
+input[type="submit"]:focus {
+    outline: none;
 }
 
 #checkbox {
