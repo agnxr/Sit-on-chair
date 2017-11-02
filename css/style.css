@@ -11,6 +11,18 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Raleway';
+    src: url('Raleway-Bold.eot');
+    src: local('Raleway Bold'), local('Raleway-Bold'),
+        url('../fonts/Raleway-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Raleway-Bold.woff2') format('woff2'),
+        url('../fonts/Raleway-Bold.woff') format('woff'),
+        url('../fonts/Raleway-Bold.ttf') format('truetype'),
+        url('../fonts/Raleway-Bold.svg#Raleway-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
 
 * {
     margin: 0;
@@ -63,6 +75,7 @@ nav ul li {
 
 span {
     color: #00D1AC;
+    font-weight: bold;
 }
 
 a {
@@ -319,7 +332,10 @@ h1 {
 
 #priceListContainer p {
     color: grey;
-    font-weight: bold;
+}
+
+#priceListContainer > p {
+    font-size: 20px;
 }
 
 #priceListContainer hr {
@@ -357,6 +373,7 @@ h1 {
     background-color: #FEFEFE;
     margin-bottom: 30px;
 }
+
 
 .block {
     /* prostokąt  - slajd 41 - element, który ma inną wartość niż static (tu: relatove, staje się konterem
@@ -564,7 +581,8 @@ input[type="submit"] {
     background-color: #00D1AC;
     height: 60px;
     width: 320px;
-    border-ra
+    border-radius: 10px;
+}
 
 #box3 hr {
     background: #00D1AC;
