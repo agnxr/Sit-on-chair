@@ -18,14 +18,14 @@ function event1(){
 
  for (i = 0; i < array[0].children.length; i++) {
    if(array[0].children[i].classList = "visible"){
-     array[0].children[i].classList.remove('visible')
+     array[0].children[i].classList.remove('visible');
    }
  }
-   array[0].children[index].classList.add('visible')
-     index = index + 1;
-     if(index>=array[0].children.length){
-       index = index - 1;
+     index = index - 1;
+     if(index<0){
+       index = 1;
      }
+     array[0].children[index].classList.add('visible');
 }
 
 prevPicture.addEventListener("click", event2);
@@ -38,11 +38,11 @@ for (i = 0; i < array[0].children.length; i++) {
  }
 }
 
- array[0].children[index].classList.add('visible')
-   index = index - 1;
-   if(index<0){
-     index = 0;
-   }
+if(index>=array[0].children.length){
+  index = 0;
+}
+  array[0].children[index].classList.add('visible')
+    index = index + 1;
 }
 
 /* end of slider */
