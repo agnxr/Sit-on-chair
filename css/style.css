@@ -640,49 +640,38 @@ input[type="submit"] {
 input[type="submit"]:focus {
     outline: none;
 }
+/* checkbox */
 
-#checkbox {
-    margin-left: 50px;
-    width: 50px;
+input#checkbox {
+      display: none; /* pole przykrywa poprzednie */
+}
+
+input + label {
+    background: transparent;
+    background-position: center;
     height: 50px;
+    width: 50px;
+    margin-left: 50px;
     margin-right: 10px;
+    display:inline-block;
     float: left;
+    border: 1px solid #00D1AC;
 }
 
-/* Footer */
-
-.bottom {
-    width: 1024px;
-    margin: 0 auto;
-    height: 120px;
-    box-sizing: border-box;
+input:checked + label {
+    background-image: url("../images/form_ok.jpg");
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 50px;
+    display:inline-block;
 }
 
-#copyright {
-    float: left;
-    margin-top: 40px;
-}
-
-#copyright p {
+#agree {
     color: silver;
-    font-size: 18px;
+    font-size: 19px;
+    margin-top: 3px;
 }
 
-#bottomLogo p, #bodius: 10px;
-    font-size: 30px;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin-left: 40px;
-    margin-top: 30px;
-}
-
-#checkbox {
-    margin-left: 50px;
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-    float: left;
-}
 
 /* Footer */
 
