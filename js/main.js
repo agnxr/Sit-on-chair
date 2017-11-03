@@ -81,4 +81,30 @@ parent.addEventListener('mouseout', function(){
   }
 });
 
+/* box section */
+
+var boxes = document.querySelectorAll('.box');
+
+function mouseOverParent(event){
+var child=this.querySelector('.whiteBackground');
+child.style.display='none';
+}
+
+
+function mouseOut(){
+  var child=this.querySelector('.whiteBackground');
+  child.style.display='block';
+}
+
+for (var i = 0; i < boxes.length; i++) {
+
+  boxes[i].addEventListener('mouseover', mouseOverParent );
+  //w przypadku zabrania myszki ma wykonac funkcje mouseout
+  boxes[i].addEventListener('mouseout', mouseOut );
+
+}
+
+
+
+
 })

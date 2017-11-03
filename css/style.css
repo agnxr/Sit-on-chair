@@ -317,14 +317,13 @@ h1 {
 
 .box p {
     color: black;
+
 }
 
 .whiteBackground {
     width: 100%;
     height: 60px;
-    background-color: white;
-    opacity: .4;
-    z-index: 0;
+    background-color: rgba(255, 255, 255, 0.5);
     bottom: 20px;
     position: absolute;
 }
@@ -335,10 +334,10 @@ h1 {
     position: relative;
 }
 
-#box1 p {
-    z-index: 2;
+.whiteBackground p {
     font-weight: bold;
-    margin-top: 120px;
+    margin-top: 10px;
+    margin-left: 15px;
 }
 
 #box2 {
@@ -347,16 +346,7 @@ h1 {
     position: relative;
 }
 
-#box2 p {
-    z-index: 2;
-    font-weight: bold;
-    margin-top: 120px;
-}
 
-.whiteBackground hr {
-    border-color: #00D1AC;
-    z-index: 3;
-}
 
 #box1 hr {
     background: #00D1AC;
@@ -364,6 +354,7 @@ h1 {
     width: 140px;
     z-index: 2;
     margin-bottom: 30px;
+    margin-left: 13px;
 }
 
 #box2 hr {
@@ -372,6 +363,7 @@ h1 {
     width: 148px;
     z-index: 2;
     margin-bottom: 30px;
+    margin-left: 13px;
 }
 
 #box3 {
@@ -401,6 +393,9 @@ h1 {
     font-size: 18px;
 }
 
+hr {
+    border: transparent;
+}
 /* koniec sekcji 2-giej */
 
 #prices {
