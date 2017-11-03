@@ -99,7 +99,6 @@ function mouseOut(){
 for (var i = 0; i < boxes.length; i++) {
 
   boxes[i].addEventListener('mouseover', mouseOverParent );
-  //w przypadku zabrania myszki ma wykonac funkcje mouseout
   boxes[i].addEventListener('mouseout', mouseOut );
 
 }
