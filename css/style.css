@@ -1,9 +1,51 @@
+@font-face {
+    font-family: 'Raleway';
+    src: url('Raleway-Regular.eot');
+    src: local('Raleway'), local('Raleway-Regular'),
+        url('../fonts/Raleway-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Raleway-Regular.woff2') format('woff2'),
+        url('../fonts/Raleway-Regular.woff') format('woff'),
+        url('../fonts/Raleway-Regular.ttf') format('truetype'),
+        url('../fonts/Raleway-Regular.svg#Raleway-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('Raleway-Bold.eot');
+    src: local('Raleway Bold'), local('Raleway-Bold'),
+        url('../fonts/Raleway-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Raleway-Bold.woff2') format('woff2'),
+        url('../fonts/Raleway-Bold.woff') format('woff'),
+        url('../fonts/Raleway-Bold.ttf') format('truetype'),
+        url('../fonts/Raleway-Bold.svg#Raleway-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('Raleway-ExtraLight.eot');
+    src: local('Raleway ExtraLight'), local('Raleway-ExtraLight'),
+        url('../fonts/Raleway-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Raleway-ExtraLight.woff2') format('woff2'),
+        url('../fonts/Raleway-ExtraLight.woff') format('woff'),
+        url('../fonts/Raleway-ExtraLight.ttf') format('truetype'),
+        url('../fonts/Raleway-ExtraLight.svg#Raleway-ExtraLight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Raleway', sans-serif;
     color: white;
     box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
 }
 
 header {
@@ -25,31 +67,68 @@ header {
     height: 60px;
     float: left;
     padding: 20px;
-    font-weight: bold;
+    font-weight: bolder;
 }
 
-#menu {
+
+/* nav */
+.menu {
     display: inline-block;
     height: 60px;
     position: absolute;
     right: 0;
+    font-weight: bold;
 }
 
-nav ul li {
-    list-style-type: none;
-    margin: 20px;
-    font-size: 14px;
-    margin-right: 0;
-    display: inline-block;
+.menu ul {
+    list-style: none;
+    width: 100%;
 }
+
+.menu>ul>li {
+    display: inline-block;
+    position: relative;
+    margin: 20px;
+}
+
+.menu>ul>li>ul {
+    display: none;
+    position: absolute;
+    width: 120px;
+    height: 90px;
+    background-color: black;
+    margin-top: 0px;
+    padding: 10px;
+    font-weight: lighter;
+    line-height: 24px;
+    margin-left: -20px;
+}
+
+#triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 11.5px 10px 11.5px;
+    border-color: transparent transparent #0a0a0a transparent;
+    margin-top: 25px;
+    margin-left: 25px;
+    margin-bottom: 0;
+    display: none;
+
+}
+
 
 span {
     color: #00D1AC;
+    font-weight: bold;
 }
 
 a {
     text-decoration: none;
 }
+
+
+/* koniec menu */
 
 #mainSection {
     width: 100%;
@@ -82,7 +161,30 @@ a {
     position: relative;
     display: inline-block;
     margin-left: 0;
+    z-index: 3;
 }
+
+button#prevPicture {
+    font-size: 60px;
+    color: #00D1AC;
+    display: inline-block;
+    margin-top: 270px;
+    position: absolute;
+    left: 25%;
+    background-color: transparent;
+    border: 0;
+    transition-duration: 0.3s;
+    font-family: 'Raleway';
+}
+
+button#prevPicture:hover, button#nextPicture:hover {
+    color: grey;
+}
+
+button:focus {
+    outline: none;
+}
+
 
 #arrowRight {
     width: 8%;
@@ -92,16 +194,8 @@ a {
     display: inline-block;
 }
 
-#arrowLeft p {
-    font-size: 60px;
-    color: #00D1AC;
-    display: inline-block;
-    margin-top: 270px;
-    position: absolute;
-    left: 25%;
-}
 
-#arrowRight p {
+button#nextPicture {
     font-size: 60px;
     color: #00D1AC;
     display: inline-block;
@@ -109,21 +203,45 @@ a {
     margin-top: 270px;
     position: absolute;
     margin-right: 0;
+    background-color: transparent;
+    border: 0;
+    transition-duration: 0.3s;
+    font-family: 'Raleway';
 }
+
 
 #chairImg {
     display: inline-block;
     position: absolute;
     width: 40%;
     height: 420px;
-    background-image: url("../images/black_chair.png");
-    background-size: cover;
     background-position: right -85px top 20px;
-    left: 80px;
+    left: 25px;
     top: 100px;
     float: left;
     margin: 0;
 }
+
+.slider img {
+    width: 100%;
+    height: 100%;
+    margin-left: 90px;
+    margin-top: 60px;
+}
+
+.slider ul{
+    list-style: none;
+}
+
+.slider li{
+    display: none;
+
+}
+
+.slider .visible{
+    display: inline-block;
+}
+
 
 #mainHeader {
     width: 40%;
@@ -140,6 +258,7 @@ h1 {
     text-align: center;
     font-size: 40px;
     margin-bottom: 30px;
+    font-weight: 400;
 }
 
 #mainHeader p {
@@ -147,6 +266,7 @@ h1 {
     font-weight: lighter;
     text-align: center;
     margin-bottom: 30px;
+    color: grey;
 }
 
 #button {
@@ -162,7 +282,12 @@ h1 {
     font-size: 20px;
     text-align: center;
     display: block;
-    padding: 10px;
+    padding: 14px;
+    font-weight: bold;
+}
+
+#button a:hover {
+    color: grey;
 }
 
 /* end of 1st section */
@@ -181,7 +306,7 @@ h1 {
     margin-top: 30px;
 }
 
-.box {
+.box, .box2 {
     margin: 0 auto;
     width: 30%;
     height: 200px;
@@ -193,14 +318,13 @@ h1 {
 
 .box p {
     color: black;
+
 }
 
 .whiteBackground {
     width: 100%;
     height: 60px;
-    background-color: white;
-    opacity: .4;
-    z-index: 0;
+    background-color: rgba(255, 255, 255, 0.5);
     bottom: 20px;
     position: absolute;
 }
@@ -211,10 +335,10 @@ h1 {
     position: relative;
 }
 
-#box1 p {
-    z-index: 2;
+.whiteBackground p {
     font-weight: bold;
-    margin-top: 120px;
+    margin-top: 10px;
+    margin-left: 15px;
 }
 
 #box2 {
@@ -223,16 +347,7 @@ h1 {
     position: relative;
 }
 
-#box2 p {
-    z-index: 2;
-    font-weight: bold;
-    margin-top: 120px;
-}
 
-.whiteBackground hr {
-    border-color: #00D1AC;
-    z-index: 3;
-}
 
 #box1 hr {
     background: #00D1AC;
@@ -240,6 +355,7 @@ h1 {
     width: 140px;
     z-index: 2;
     margin-bottom: 30px;
+    margin-left: 13px;
 }
 
 #box2 hr {
@@ -248,13 +364,17 @@ h1 {
     width: 148px;
     z-index: 2;
     margin-bottom: 30px;
+    margin-left: 13px;
 }
 
 #box3 {
-    height: 230px;
+    height: 240px;
+    width: 319px;
     border: 1px solid silver;
     padding-top: 20px;
     padding-bottom: 20px;
+    padding: 20px;
+    font-size: 14px;
 }
 
 #box3 p {
@@ -274,6 +394,9 @@ h1 {
     font-size: 18px;
 }
 
+hr {
+    border: transparent;
+}
 /* koniec sekcji 2-giej */
 
 #prices {
@@ -285,16 +408,20 @@ h1 {
 
 #priceListContainer {
     width: 1024px;
-    height: 600px;
+    height: 680px;
     background-color: #f1f2f3;
     margin-top: 50px;
     position: relative;
     box-sizing: border-box;
     margin: 0 auto;
+    padding-top: 30px;
 }
 
 #priceListContainer p {
     color: grey;
+}
+
+#priceListContainer > p {
     font-size: 20px;
 }
 
@@ -303,6 +430,10 @@ h1 {
     height: 8px;
     width: 300px;
     margin-bottom: 80px;
+}
+
+#priceListContainer .priceCircle p {
+    color: #CCCCCC;
 }
 
 /* tabs */
@@ -332,7 +463,9 @@ h1 {
     position: relative;
     background-color: #FEFEFE;
     margin-bottom: 30px;
+    margin-top: 20px;
 }
+
 
 .block {
     position: relative;
@@ -343,8 +476,11 @@ h1 {
     background-color: #F9F9F9;
 }
 
+#tab1, #tab2, #tab3 {
+    width: 30%;
+}
 .outer {
-    /* duże kółko */
+    /* big circle */
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -352,11 +488,11 @@ h1 {
     background: white;
     position: absolute;
     top: -25px;
-    left: 115px;
+    left: 125px;
 }
 
 .inner {
-    /* małe kółko */
+    /* small circle */
     width: 50%;
     height: 50%;
     background: silver;
@@ -410,18 +546,21 @@ h3 {
     font-size: 35px;
     position: absolute;
     margin-top: 20px;
-    margin-left: 20px;
+    margin-left: 30px;
+    text-align: center;
 }
 
 sup {
     color: #CCCCCC;
     font-size: 16px;
+    float: right;
 }
 
 .priceCircle p {
     color: #CCCCCC;
     margin-top: 70px;
     text-align: center;
+    font-size: 14px;
 }
 
 .darkGrey {
@@ -453,6 +592,33 @@ sup {
 .white p {
     color: #C5C5C5;
 }
+
+.main:hover .block {
+    background-color: #00D1AC;
+    transition-duration: 0.6s;
+}
+
+.main:hover .outer {
+    background-color: #00D1AC;
+    border: transparent;
+    transition-duration: 0.7s;
+}
+.main:hover .button {
+    background-color: white;
+}
+
+.main:hover .button a {
+    color: #00D1AC;
+}
+
+.main:hover .block h2 {
+    color:white;
+}
+
+.main:hover .block .priceCircle h3, .main:hover .block .priceCircle sup, #priceListContainer .main:hover .priceCircle p {
+    color: #00D1AC;
+}
+
 
 /* sekcja - Kontakt */
 
@@ -498,7 +664,7 @@ sup {
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 5px;
-    font-size: 30px;
+    font-size: 25px;
     width: 600px;
     color: black;
 }
@@ -511,21 +677,30 @@ textarea {
 ::-webkit-input-placeholder {
     /* Chrome/Opera/Safari */
     color: silver;
+    font-family: 'Raleway';
+    font-weight: lighter;
+
 }
 
 ::-moz-placeholder {
     /*     margin-top: 50px;Firefox 19+ */
     color: silver;
+    font-family: 'Raleway';
+    font-weight: lighter;
 }
 
 :-ms-input-placeholder {
     /* IE 10+ */
     color: silver;
+    font-family: 'Raleway';
+    font-weight: lighter;
 }
 
 :-moz-placeholder {
     /* Firefox 18- */
     color: silver;
+    font-family: 'Raleway';
+    font-weight: lighter;
 }
 
 label {
@@ -543,15 +718,47 @@ input[type="submit"] {
     font-weight: bold;
     margin-left: 40px;
     margin-top: 30px;
+    border: 0;
 }
 
-#checkbox {
-    margin-left: 50px;
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-    float: left;
+input[type="submit"]:hover {
+    color: grey;
 }
+input[type="submit"]:focus {
+    outline: none;
+}
+/* checkbox */
+
+input#checkbox {
+      display: none; /* pole przykrywa poprzednie */
+}
+
+input + label {
+    background: transparent;
+    background-position: center;
+    height: 50px;
+    width: 50px;
+    margin-left: 50px;
+    margin-right: 10px;
+    display:inline-block;
+    float: left;
+    border: 1px solid #00D1AC;
+}
+
+input:checked + label {
+    background-image: url("../images/form_ok.jpg");
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 50px;
+    display:inline-block;
+}
+
+#agree {
+    color: silver;
+    font-size: 19px;
+    margin-top: 3px;
+}
+
 
 /* Footer */
 
