@@ -67,8 +67,9 @@ header {
     height: 60px;
     float: left;
     padding: 20px;
-    font-weight: bold;
+    font-weight: bolder;
 }
+
 
 /* nav */
 .menu {
@@ -257,6 +258,7 @@ h1 {
     text-align: center;
     font-size: 40px;
     margin-bottom: 30px;
+    font-weight: 400;
 }
 
 #mainHeader p {
@@ -282,6 +284,10 @@ h1 {
     display: block;
     padding: 14px;
     font-weight: bold;
+}
+
+#button a:hover {
+    color: grey;
 }
 
 /* end of 1st section */
@@ -607,7 +613,7 @@ sup {
     color:white;
 }
 
-.main:hover .block .priceCircle h3, .main:hover .block .priceCircle sup, #priceListContainer:hover .priceCircle p {
+.main:hover .block .priceCircle h3, .main:hover .block .priceCircle sup, #priceListContainer .main:hover .priceCircle p {
     color: #00D1AC;
 }
 
@@ -710,9 +716,12 @@ input[type="submit"] {
     font-weight: bold;
     margin-left: 40px;
     margin-top: 30px;
+    border: 0;
 }
 
-
+input[type="submit"]:hover {
+    color: grey;
+}
 input[type="submit"]:focus {
     outline: none;
 }
