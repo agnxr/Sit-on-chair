@@ -72,13 +72,21 @@ header {
 
 
 /* nav */
+
+@media screen and (min-width: 1024px) {
+    .menu {
+        right: 0;
+    }
+}
+
 .menu {
     display: inline-block;
     height: 60px;
     position: absolute;
-    right: 0;
     font-weight: bold;
 }
+
+
 
 .menu ul {
     list-style: none;
@@ -97,7 +105,7 @@ header {
     width: 120px;
     height: 90px;
     background-color: black;
-    margin-top: 0px;
+    margin-top: 0;
     padding: 10px;
     font-weight: lighter;
     line-height: 24px;
@@ -128,31 +136,43 @@ a {
 }
 
 
-/* koniec menu */
+    /* koniec menu */
 
 #mainSection {
     width: 100%;
-    background: -moz-linear-gradient(270deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 52%, rgba(192, 192, 192, 1) 99%, rgba(128, 128, 128, 1) 100%, rgba(128, 128, 128, 1) 100%);
-    /* ff3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(52%, rgba(255, 255, 255, 1)), color-stop(99%, rgba(192, 192, 192, 1)), color-stop(100%, rgba(128, 128, 128, 1)), color-stop(100%, rgba(128, 128, 128, 1)));
-    /* safari4+,chrome */
-    background: -webkit-linear-gradient(270deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 52%, rgba(192, 192, 192, 1) 99%, rgba(128, 128, 128, 1) 100%, rgba(128, 128, 128, 1) 100%);
-    /* safari5.1+,chrome10+ */
-    background: -o-linear-gradient(270deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 52%, rgba(192, 192, 192, 1) 99%, rgba(128, 128, 128, 1) 100%, rgba(128, 128, 128, 1) 100%);
-    /* opera 11.10+ */
-    background: -ms-linear-gradient(270deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 52%, rgba(192, 192, 192, 1) 99%, rgba(128, 128, 128, 1) 100%, rgba(128, 128, 128, 1) 100%);
-    /* ie10+ */
-    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 52%, rgba(192, 192, 192, 1) 99%, rgba(128, 128, 128, 1) 100%, rgba(128, 128, 128, 1) 100%);
-    /* w3c */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#808080', GradientType=0);
-    /* ie6-9 */
+    background-color:whitesmoke;
+}
+
+@media screen and (min-width: 1030px) {
+    #mainSection {
+        background: -moz-linear-gradient(270deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 52%, rgba(192, 192, 192, 1) 99%, rgba(128, 128, 128, 1) 100%, rgba(128, 128, 128, 1) 100%);
+        /* ff3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(52%, rgba(255, 255, 255, 1)), color-stop(99%, rgba(192, 192, 192, 1)), color-stop(100%, rgba(128, 128, 128, 1)), color-stop(100%, rgba(128, 128, 128, 1)));
+        /* safari4+,chrome */
+        background: -webkit-linear-gradient(270deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 52%, rgba(192, 192, 192, 1) 99%, rgba(128, 128, 128, 1) 100%, rgba(128, 128, 128, 1) 100%);
+        /* safari5.1+,chrome10+ */
+        background: -o-linear-gradient(270deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 52%, rgba(192, 192, 192, 1) 99%, rgba(128, 128, 128, 1) 100%, rgba(128, 128, 128, 1) 100%);
+        /* opera 11.10+ */
+        background: -ms-linear-gradient(270deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 52%, rgba(192, 192, 192, 1) 99%, rgba(128, 128, 128, 1) 100%, rgba(128, 128, 128, 1) 100%);
+        /* ie10+ */
+        background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 52%, rgba(192, 192, 192, 1) 99%, rgba(128, 128, 128, 1) 100%, rgba(128, 128, 128, 1) 100%);
+        /* w3c */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#808080', GradientType=0);
+        /* ie6-9 */
+    }
 }
 
 #welcome {
     width: 1024px;
-    height: 600px;
+    height: 300px;
     margin: 0 auto;
     position: relative;
+}
+
+@media screen and (min-width: 800px) {
+    #welcome {
+        height: 600px;
+    }
 }
 
 #arrowLeft {
@@ -162,8 +182,32 @@ a {
     display: inline-block;
     margin-left: 0;
     z-index: 3;
-<<<<<<< HEAD
 }
+
+@media screen and (max-width: 1024px) {
+
+    button#prevPicture, button#nextPicture {
+        visibility: hidden;
+    }
+
+}
+
+button#prevPicture {
+    font-size: 60px;
+    color: #00D1AC;
+    display: inline-block;
+    margin-top: 270px;
+    position: absolute;
+    left: 25%;
+    background-color: transparent;
+    border: 0;
+    transition-duration: 0.3s;
+}
+
+button#prevPicture:hover, button#nextPicture:hover {
+    color: grey;
+}
+
 
 button#prevPicture {
     font-size: 60px;
@@ -182,27 +226,6 @@ button#prevPicture:hover, button#nextPicture:hover {
     color: grey;
 }
 
-=======
-}
-
-button#prevPicture {
-    font-size: 60px;
-    color: #00D1AC;
-    display: inline-block;
-    margin-top: 270px;
-    position: absolute;
-    left: 25%;
-    background-color: transparent;
-    border: 0;
-    transition-duration: 0.3s;
-    font-family: 'Raleway';
-}
-
-button#prevPicture:hover, button#nextPicture:hover {
-    color: grey;
-}
-
->>>>>>> 745d96cca343fc95c2a5050596801d1d29e3f726
 button:focus {
     outline: none;
 }
@@ -244,11 +267,23 @@ button#nextPicture {
     margin: 0;
 }
 
+
 .slider img {
     width: 100%;
     height: 100%;
-    margin-left: 90px;
-    margin-top: 60px;
+    margin-top: -100px;
+}
+
+@media screen and (min-width: 1024px) {
+    .slider img {
+        margin-left: 90px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .slider img {
+        margin-top: 60px;
+    }
 }
 
 .slider ul{
@@ -268,11 +303,23 @@ button#nextPicture {
 #mainHeader {
     width: 40%;
     height: 430px;
-    margin-top: 170px;
-    margin-left: 450px;
+    margin-top: 10px;
+    margin-left: 340px;
     float: left;
     position: absolute;
     display: inline-block;
+}
+
+@media screen and (min-width: 1024px) {
+    #mainHeader {
+        margin-left: 450px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    #mainHeader {
+        margin-top: 170px;
+    }
 }
 
 h1 {
@@ -283,8 +330,8 @@ h1 {
     font-weight: 400;
 }
 
+
 #mainHeader p {
-    color: black;
     font-weight: lighter;
     text-align: center;
     margin-bottom: 30px;
@@ -328,7 +375,7 @@ h1 {
     margin-top: 30px;
 }
 
-.box, .box2 {
+.box, .box2, .tab {
     margin: 0 auto;
     width: 30%;
     height: 200px;
@@ -341,6 +388,25 @@ h1 {
 .box p {
     color: black;
 
+}
+
+@media screen and (max-width: 800px) {
+    .box {
+        margin-left: 30%;
+        clear: left;
+        margin-bottom: 5px;
+    }
+
+
+    #chairsSection {
+            height: 680px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    #box3 {
+        width: 319px;
+    }
 }
 
 .whiteBackground {
@@ -391,10 +457,8 @@ h1 {
 
 #box3 {
     height: 240px;
-    width: 319px;
+    width: 30%;
     border: 1px solid silver;
-    padding-top: 20px;
-    padding-bottom: 20px;
     padding: 20px;
     font-size: 14px;
 }
@@ -462,13 +526,15 @@ hr {
 
 #tab1, #tab2, #tab3 {
     margin-left: 0;
-    margin-right: 0px;
+    margin-right: 0;
     margin-top: 130px;
 }
 
 #tab1, #tab2 {
     margin-right: 50px;
 }
+
+
 
 .main {
     /* całość - całe div */
@@ -482,7 +548,6 @@ hr {
     border: 2px solid silver;
     z-index: 3;
     margin: 0 auto;
-    position: relative;
     background-color: #FEFEFE;
     margin-bottom: 30px;
     margin-top: 20px;
@@ -491,7 +556,6 @@ hr {
 
 .block {
     position: relative;
-    height: 500px;
     margin-top: -260px;
     border: 1px solid silver;
     box-sizing: border-box;
@@ -518,7 +582,7 @@ hr {
     width: 50%;
     height: 50%;
     background: silver;
-    border: 0px;
+    border: 0;
     border-radius: 50%;
     position: absolute;
     top: 25%;
@@ -530,10 +594,11 @@ hr {
     padding: 7px;
     background: #00D1AC;
     color: white;
-    margin: 0px auto;
+    margin: 0 auto;
     width: 50%;
     border-radius: 10px;
     text-align: center;
+    margin-bottom: 15px;
 }
 
 #button1 {
@@ -616,23 +681,17 @@ sup {
 }
 
 .main:hover .block {
-<<<<<<< HEAD
     background-color: #00D1AC;;
 }
 
 .main:hover .outer {
-    background-color: #00D1AC;;
     border: transparent;
-=======
     background-color: #00D1AC;
-    transition-duration: 0.6s;
 }
 
 .main:hover .outer {
     background-color: #00D1AC;
     border: transparent;
-    transition-duration: 0.7s;
->>>>>>> 745d96cca343fc95c2a5050596801d1d29e3f726
 }
 .main:hover .button {
     background-color: white;
@@ -650,6 +709,49 @@ sup {
     color: #00D1AC;
 }
 
+@media screen and (max-width: 800px) {
+    #tab1, #tab2, #tab3 {
+        margin-left: 25%;
+        margin-right: 30%;
+        height: 200px;
+        width: 40%;
+        margin-bottom:2%;
+    }
+    #tab2 {
+        margin-bottom: 6%;
+    }
+
+
+    .outer {
+        left: 45%;
+    }
+
+    #button1, #button2, #button3 {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    #priceListContainer>p, hr {
+        margin-left: 25%;
+    }
+
+    .priceCircle {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    #contact {
+        background-color: #f1f2f3;
+    }
+
+    .form p:nth-child(1){
+        visibility: hidden;
+    }
+
+    .form hr:nth-child(2) {
+        visibility: hidden;
+    }
+}
 
 /* sekcja - Kontakt */
 
